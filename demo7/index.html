@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>
+                Testing Website
+            </h1>
+        </header>
+        <section>
+            <figure>
+                <img src="./cerdo.png" alt="a pig image"/>
+                <figcaption>    <!-- image description -->
+                    It's a pig image
+                </figcaption>
+            </figure>
+            <br/><br/>
+            <video controls preload="auto"> <!-- preload to start loading video when the website charges -->
+                <source src="./episode.mp4#t=10,60"/>   <!-- if the browser don't understand the video format, we can put differents sources -->
+                <source src="./episode.m4v#t=10,60"/> 
+            </video> <!-- #t=s,s to start and stop the video in a specific second -->
+        </section>
+    </main>
+</body>
+</html>

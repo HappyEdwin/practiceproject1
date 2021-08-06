@@ -2,6 +2,8 @@ class paperMoney{
     constructor(value, amount){
         this.value = value;
         this.amount = amount;
+        this.image = new Image();
+        this.image.src = images[this.value];
     }
 }
 
@@ -28,18 +30,30 @@ function withdrawMoney(){
                 totalMoney -= requestedMoney;
             }
         }
+
+        //------------------------------------- Output values -------------------------------------//
+
+        resultsHtml.innerHTML += "<hr/>";   //separator lines
         for (var j of deliveredCash){
             if(j.amount>0){
-            document.getElementById("results").innerHTML +=  "Te he entregado " + j.amount + " billetes de $" + j.value + "<br/>";
+            resultsHtml.innerHTML +=  "Te he entregado " + j.amount + " billetes de $" + j.value + "<br/>"; //text printing
+            }
+        }
+        for (var k of deliveredCash){
+            for(var e=0; e<k.amount; e++){
+                resultsHtml.innerHTML += "<image src=" + k.image.src + "></image>"; //images printing
             }
         }
         document.getElementById("results").innerHTML += "<br/>";
+        resultsHtml.innerHTML += "<hr/>";   //separator lines
     }
     else{
         alert("Lo sentimos, no nos queda más dinero :( \nO haz introducido una cifra incorrecta.");
     }
-    console.log(deliveredCash);
 }
+
+var resultsHtml = document.getElementById("results");
+var images = {50:"cerdo.png", 20:"vaca.png", 10:"pollo.png"};
 
 var cash = [];
 cash.push(new paperMoney(50,10));
@@ -47,5 +61,6 @@ cash.push(new paperMoney(20,20));
 cash.push(new paperMoney(10,20));
 var totalMoney = (cash[0].value*cash[0].amount)+(cash[1].value*cash[1].amount)+(cash[2].value*cash[2].amount);
 
-document.getElementById("withdrawButton").addEventListener("click", withdrawMoney);
+
+document.getElementById("withdrawButton").addEventListener("click", withdrawMoney); //input values
 
