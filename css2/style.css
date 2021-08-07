@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+
+.container {
+    border: 0.3rem solid darkolivegreen;
+    height: 15vh;
+    display: flex;
+    align-items: stretch ;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.box{
+    text-align: center;
+    flex-basis: 10rem;
+    flex-grow: 1;
+    margin: 1rem;
+}
+.box1{
+    background-color: darkorange;
+    order: 1;
+}
+.box2{
+    background-color: darkred;
+    order: 3;
+}
+.box3{
+    background-color: darkviolet;
+    order: 2;
+}
+.box4{
+    background-color: deepskyblue; /*If a box haven't order it they will place at start*/
+}

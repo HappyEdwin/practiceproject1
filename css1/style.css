@@ -1,0 +1,113 @@
+*{                  /*To erase the predeterminated styles*/
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;     /*important*/ /*Only works with padding and border, no for margin*/
+}
+
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* <header> --- Header Style Elements --- </header> */
+
+header{
+    margin: 10px 0px;
+    padding: 30px 45px;
+    background-color: #13a4a4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.website-branding{
+    display: flex;
+    align-items: center;
+}
+
+.website-name a{
+    text-decoration: none;
+    color: #fdd5b7;
+    font-size: 3rem;
+    -webkit-text-stroke: 0.04rem black;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+}
+
+.main-nav {
+    margin-top: 0rem;
+    list-style: none;
+    display: flex;
+}
+
+.main-nav__item a {
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-text-stroke: 0.02rem black;
+
+}
+.main-nav__item a:hover {  /*Pseudo class : Defines the style of an state*/
+    color: tomato;
+}
+.main-nav__item a:active {
+    color: black;
+}
+.main-nav__item a::after { /*Pseudo element :: defines a style or a change on an element*/
+    content: "";
+}
+
+
+/* <main> --- Main Style Elements --- </main> */
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-section {
+    padding: 2rem 3.5rem;
+    min-height: 30rem;
+}
+
+#section1 {
+    border: 1rem solid darkcyan;
+    min-width: 10rem;
+}
+
+#section2 {
+    border: 1rem solid rgb(250, 128, 114);
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.link a{    /*Changing a color link after and before the click*/
+    text-decoration: none;
+    color: salmon;
+}
+.link a:visited {
+    color: darkblue;
+}
+
+/* <footer> --- Footer Sytle Elements --- </footer> */
+footer {
+    background-color: darkgoldenrod;
+    margin: 10px 0px;
+    padding: 20px 35px;
+}
+footer p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
