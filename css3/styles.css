@@ -1,0 +1,113 @@
+/*-----  Variables -----*/
+:root {
+    --padding-body-child: 2.5vh 2.5vh;
+
+    --primary-color: #003476;
+    --secundary-color: #f91a40;
+    --terciary-color: #b4d2f7;
+
+    --title-font-size: 3.5rem;
+    --body-font-size: 2rem;
+    --body-font-family: 'Merriweather', serif;
+    --title-font-family: 'Lora', serif;
+}
+
+/*-----  Source styles  -----*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font-family);
+}
+html {
+    font-size: 62.5%;
+}
+
+/*-----  Header style's part -----*/
+
+header {
+    width: 100vw;
+    height: 15vh;
+    padding: var(--padding-body-child);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.website-branding a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.website-name{
+    color: white;
+    font-size: 4rem;
+}
+.nav-bar{
+    display: flex;
+    font-size: 2rem;
+    list-style: none;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+}
+.nav-bar a:hover{
+    color: var(--secundary-color);
+}
+.nav-bar a:active{
+    color: black;
+}
+
+/*-----  Main style's part -----*/
+
+main {
+    width: 100vw;
+    min-height: 70vh;
+    padding: var(--padding-body-child);
+    font-size: var(--body-font-size);
+    display: flex;
+}
+main section{
+    padding: 0rem 1rem;
+    min-height: 60vh;
+}
+h1 {
+    font-size: var(--title-font-size);
+    font-family: var(--title-font-family);
+    color: var(--primary-color);
+}
+.left-section{
+    width: 30vw;
+    max-width: 270px;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--secundary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.left-section div{
+    background-color: var(--terciary-color);
+    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+    margin: 0.5rem;
+    font-size: 1.6rem;
+}
+.left-section div h1{
+    font-size: 2.2rem;
+}
+.main-section{
+    margin-left: 2rem;
+}
+
+/*-----  Footer style's part -----*/
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    padding: var(--padding-body-child);
+    background-color: var(--terciary-color);
+}
